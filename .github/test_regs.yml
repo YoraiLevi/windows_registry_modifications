@@ -1,0 +1,44 @@
+name: Windows Action
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    # build:
+    #     runs-on: windows-latest
+    #     steps:
+    #         - name: Checkout repository
+    #           uses: actions/checkout@v2
+    #         - name: Test PowerShell script
+    #           shell: powershell
+    #           run: |
+    #             # Run PowerShell script here
+
+    test:
+        runs-on: windows-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+            - name: Install reg command-line tool
+              run: choco install reg
+            - name: Create reg-merge-results directory
+              run: New-Item -ItemType Directory -Path reg-merge-results
+            - name: Test reg merge
+              shell: powershell
+              run: |
+                $regFiles = Get-ChildItem -Path . -Filter *.reg -Recurse
+                foreach ($regFile in $regFiles) {
+                  $output = reg import $regFile.FullName 2>&1
+                  if ($output -like "*The operation completed successfully.*") {
+                    New-Item -ItemType File -Path "reg-merge-results\$($regFile.Name).pass"
+                  } else {
+                    New-Item -ItemType File -Path "reg-merge-results\$($regFile.Name).fail"
+                  }
+                }
+            - name: Upload reg-merge-results artifact
+              uses: actions/upload-artifact@v2
+              with:
+                name: reg-merge-results
+                path: reg-merge-results
