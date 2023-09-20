@@ -1,0 +1,64 @@
+These files have failed 
+Get-ChildItem -Recurse -Filter "*.reg" | foreach {reg import $_.FullName; if (!$?){Add-Content "failed.txt" $_.FullName}
+
+in hypverv virtual machine
+
+
+elevenforum\Add or Remove Add or edit stickers Desktop context menu in Windows 11
+elevenforum\Disable Show more options context menu in Windows 11
+elevenforum\Reset and Restore Default Apps for File Types in Windows 11
+elevenforum\Turn On or Off Respect Power Settings when Indexing in Windows 11
+tenforums\Add or Remove Empty Recycle Bin Context Menu for Recycle Bin in Windows
+tenforums\How to Add or Remove Control Panel from This PC in Windows 10
+tenforums\How to Add or Remove Display settings Desktop Context Menu in Windows 10
+tenforums\How to Add or Remove Open PowerShell window here context menu in Windows 10
+tenforums\How to Add or Remove Personalize Desktop Context Menu in Windows 10
+tenforums\How to Set Ethernet Connection as Metered or Non-Metered in Windows 10
+tenforums\How to Turn On or Off Enhanced Mode for Search Indexer in Windows 10
+tenforums\How to Turn On or Off Search Indexer Respect Device Power Mode Settings in Windows 10
+
+
+
+------------
+
+
+elevenforum\Add or Remove Add or edit stickers Desktop context menu in Windows 11
+Add_Add_or_edit_stickers_context_menu.reg
+elevenforum\Disable Show more options context menu in Windows 11
+Disable_Show_more_options_context_menu_for_all_users.reg
+elevenforum\Disable Show more options context menu in Windows 11
+Enable_Show_more_options_context_menu_for_all_users.reg
+elevenforum\Reset and Restore Default Apps for File Types in Windows 11
+zip.reg
+elevenforum\Turn On or Off Respect Power Settings when Indexing in Windows 11
+Turn_OFF_RespectPowerModes_for_search_indexer_performance.reg
+elevenforum\Turn On or Off Respect Power Settings when Indexing in Windows 11
+Turn_ON_RespectPowerModes_for_search_indexer_performance.reg
+tenforums\Add or Remove Empty Recycle Bin Context Menu for Recycle Bin in Windows
+Add_Empty_Recycle_Bin_context_menu.reg
+tenforums\How to Add or Remove Control Panel from This PC in Windows 10
+32-bit_Add_Control_Panel_to_This_PC.reg
+tenforums\How to Add or Remove Control Panel from This PC in Windows 10
+64-bit_Add_Control_Panel_to_This_PC.reg
+tenforums\How to Add or Remove Control Panel from This PC in Windows 10
+Remove_Control_Panel_from_This_PC.reg
+tenforums\How to Add or Remove Display settings Desktop Context Menu in Windows 10
+Add_Display_settings_to_desktop_context_menu.reg
+tenforums\How to Add or Remove Open PowerShell window here context menu in Windows 10
+Add_Open_PowerShell_window_here_context_menu.reg
+tenforums\How to Add or Remove Open PowerShell window here context menu in Windows 10
+Add_Shift+Open_PowerShell_window_here_context_menu.reg
+tenforums\How to Add or Remove Personalize Desktop Context Menu in Windows 10
+Add_Personalize_to_desktop_context_menu.reg
+tenforums\How to Set Ethernet Connection as Metered or Non-Metered in Windows 10
+Set_Ethernet_as_metered_connection.reg
+tenforums\How to Set Ethernet Connection as Metered or Non-Metered in Windows 10
+Set_Ethernet_as_non-metered_connection.reg
+tenforums\How to Turn On or Off Enhanced Mode for Search Indexer in Windows 10
+Set_Find_My_Files_to_Classic_for_search_indexer.reg
+tenforums\How to Turn On or Off Enhanced Mode for Search Indexer in Windows 10
+Set_Find_My_Files_to_Enhanced_for_search_indexer.reg
+tenforums\How to Turn On or Off Search Indexer Respect Device Power Mode Settings in Windows 10
+Turn_OFF_RespectPowerModes_for_search_indexer_performance.reg
+tenforums\How to Turn On or Off Search Indexer Respect Device Power Mode Settings in Windows 10
+Turn_ON_RespectPowerModes_for_search_indexer_performance.reg
