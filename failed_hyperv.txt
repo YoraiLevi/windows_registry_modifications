@@ -1,25 +1,38 @@
 These files have failed 
 Get-ChildItem -Recurse -Filter "*.reg" | foreach {reg import $_.FullName; if (!$?){Add-Content "failed.txt" $_.FullName}
 
-in hypverv virtual machine
-
+in hypverv virtual machine / github action
 
 elevenforum\Add or Remove Add or edit stickers Desktop context menu in Windows 11
 elevenforum\Disable Show more options context menu in Windows 11
 elevenforum\Reset and Restore Default Apps for File Types in Windows 11
 elevenforum\Turn On or Off Respect Power Settings when Indexing in Windows 11
 tenforums\Add or Remove Empty Recycle Bin Context Menu for Recycle Bin in Windows
+tenforums\Allow or Deny Write Access to Removable Drives not Protected by BitLocker in Windows
 tenforums\How to Add or Remove Control Panel from This PC in Windows 10
 tenforums\How to Add or Remove Display settings Desktop Context Menu in Windows 10
+tenforums\How to Add or Remove Open Linux shell here context menu in Windows 10
 tenforums\How to Add or Remove Open PowerShell window here context menu in Windows 10
 tenforums\How to Add or Remove Personalize Desktop Context Menu in Windows 10
+tenforums\How to Change Level of Context Narrator Provides for Buttons and other Controls in Windows 10
 tenforums\How to Set Ethernet Connection as Metered or Non-Metered in Windows 10
 tenforums\How to Turn On or Off Enhanced Mode for Search Indexer in Windows 10
 tenforums\How to Turn On or Off Search Indexer Respect Device Power Mode Settings in Windows 10
-
-
+tenforums\How to Turn On or Off Use sign-in info to auto finish setting up device after update or restart in Windows 10
 
 ------------
+tenforums\How to Add or Remove Open Linux shell here context menu in Windows 10
+Add_Open_Linux_shell_here_context_menu.reg
+tenforums\How to Add or Remove Open Linux shell here context menu in Windows 10
+Add_Shift+Open_Linux_shell_here_context_menu.reg
+tenforums\How to Turn On or Off Use sign-in info to auto finish setting up device after update or restart in Windows 10
+Default_Not_Configured_Automatic_sign-in_after_Windows_Update_restart.reg
+tenforums\Allow or Deny Write Access to Removable Drives not Protected by BitLocker in Windows
+Deny_write_access_to_removable_drives_not_protected_by_BitLocker_and_from_another_organization.reg
+tenforums\How to Change Level of Context Narrator Provides for Buttons and other Controls in Windows 10
+Full_context_of_new_control_level_of_context_Narrator_provides_for_buttons_and_other_controls.reg
+Full_context_of_old_and_new_controls_level_of_context_Narrator_provides_for_buttons_and_other_co.reg
+Immediate_context_name_and_type_level_of_context_Narrator_provides_for_buttons_and_other_control.reg
 
 
 elevenforum\Add or Remove Add or edit stickers Desktop context menu in Windows 11
