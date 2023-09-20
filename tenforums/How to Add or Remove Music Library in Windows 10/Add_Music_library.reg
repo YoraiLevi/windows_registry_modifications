@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: August 23rd 2017
+; Tutorial: https://www.tenforums.com/tutorials/92000-add-remove-music-library-windows-10-a.html
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{2112AB0A-C86A-4ffe-A368-0DE96E47012E}\PropertyBag]
+"ThisPCPolicy"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{2112AB0A-C86A-4ffe-A368-0DE96E47012E}\PropertyBag]
+"ThisPCPolicy"=-

@@ -1,0 +1,37 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: July 10, 2022
+; Tutorial: https://www.elevenforum.com/t/add-or-remove-d-drive-in-navigation-pane-of-file-explorer-in-windows-11.7636/
+
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{0525388b-89d9-4112-bf4d-2aaccb716a7f}]
+@="D: Drive"
+"System.IsPinnedToNamespaceTree"=dword:00000001
+"SortOrderIndex"=dword:00000050
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{0525388b-89d9-4112-bf4d-2aaccb716a7f}\DefaultIcon]
+@=hex(2):69,00,6d,00,61,00,67,00,65,00,72,00,65,00,73,00,2e,00,64,00,6c,00,6c,\
+  00,2c,00,2d,00,33,00,32,00,00,00
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{0525388b-89d9-4112-bf4d-2aaccb716a7f}\InProcServer32]
+@=hex(2):43,00,3a,00,5c,00,57,00,49,00,4e,00,44,00,4f,00,57,00,53,00,5c,00,73,\
+  00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,73,00,68,00,65,00,6c,00,\
+  6c,00,33,00,32,00,2e,00,64,00,6c,00,6c,00,00,00
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{0525388b-89d9-4112-bf4d-2aaccb716a7f}\Instance]
+"CLSID"="{0E5AAE11-A475-4c5b-AB00-C66DE400274E}"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{0525388b-89d9-4112-bf4d-2aaccb716a7f}\Instance\InitPropertyBag]
+"Attributes"=dword:00000011
+"TargetFolderPath"=hex(2):44,00,3a,00,5c,00,00,00
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{0525388b-89d9-4112-bf4d-2aaccb716a7f}\ShellFolder]
+"FolderValueFlags"=dword:00000028
+"Attributes"=dword:f080004d
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{0525388b-89d9-4112-bf4d-2aaccb716a7f}"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{0525388b-89d9-4112-bf4d-2aaccb716a7f}]
+@="D: Drive"

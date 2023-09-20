@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: April 21, 2023
+; Tutorial: https://www.elevenforum.com/t/enable-or-disable-color-filters-in-windows-11.2098/
+
+[HKEY_CURRENT_USER\Software\Microsoft\ColorFiltering]
+"Active"=dword:00000001
+"FilterType"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Accessibility]
+"Configuration"="colorfiltering"

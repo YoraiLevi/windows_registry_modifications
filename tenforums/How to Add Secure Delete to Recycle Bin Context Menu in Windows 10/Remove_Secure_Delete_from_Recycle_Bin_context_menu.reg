@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: December 29th 2018
+; Tutorial: https://www.tenforums.com/tutorials/124353-add-secure-delete-recycle-bin-context-menu-windows-10-a.html
+
+
+[-HKEY_CLASSES_ROOT\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shell\SecureDelete]

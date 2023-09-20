@@ -1,0 +1,32 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: March 17th 2019
+; Tutorial: https://www.tenforums.com/tutorials/129101-add-unblock-file-context-menu-windows-10-a.html
+
+
+[HKEY_CLASSES_ROOT\*\shell\unblock]
+"MUIVerb"="Unblock"
+"Extended"=-
+
+[HKEY_CLASSES_ROOT\*\shell\unblock\command]
+@="powershell.exe Unblock-File -LiteralPath '%L'"
+
+
+
+[HKEY_CLASSES_ROOT\Directory\shell\unblock]
+"MUIVerb"="Unblock"
+"Extended"=-
+"SubCommands"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\unblock\shell\001flyout]
+"MUIVerb"="Unblock files only in this folder"
+
+[HKEY_CLASSES_ROOT\Directory\shell\unblock\shell\001flyout\command]
+@="powershell.exe get-childitem -LiteralPath '%L' | Unblock-File"
+
+[HKEY_CLASSES_ROOT\Directory\shell\unblock\shell\002flyout]
+"MUIVerb"="Unblock files in this folder and subfolders"
+
+[HKEY_CLASSES_ROOT\Directory\shell\unblock\shell\002flyout\command]
+@="powershell.exe get-childitem -LiteralPath '%L' -recurse | Unblock-File"

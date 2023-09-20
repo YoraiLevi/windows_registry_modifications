@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: July 16, 2021
+; Tutorial: https://www.elevenforum.com/t/add-open-in-windows-terminal-expandable-context-menu-in-windows-11.583/
+
+
+
+[-HKEY_CLASSES_ROOT\Directory\shell\OpenWTHere]
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWTHere]

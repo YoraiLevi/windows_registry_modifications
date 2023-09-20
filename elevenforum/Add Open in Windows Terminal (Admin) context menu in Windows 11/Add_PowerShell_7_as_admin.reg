@@ -1,0 +1,25 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: May 2, 2021
+; Updated on: February 11, 2023
+; Tutorial: https://www.elevenforum.com/t/add-open-in-windows-terminal-as-administrator-context-menu-in-windows-11.581/
+
+
+[HKEY_CLASSES_ROOT\Directory\Shell\OpenWTHereAsAdmin\shell\004flyout]
+"MUIVerb"="PowerShell 7"
+"HasLUAShield"=""
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Shell\OpenWTHereAsAdmin\shell\004flyout\command]
+@="powershell.exe -WindowStyle Hidden \"Start-Process -Verb RunAs cmd.exe -ArgumentList @('/c','start wt.exe','-p','\"\"\"PowerShell\"\"\"','-d','\"\"\"%V\\.\"\"\"')\""
+
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\Shell\OpenWTHereAsAdmin\shell\004flyout]
+"MUIVerb"="PowerShell 7"
+"HasLUAShield"=""
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\Shell\OpenWTHereAsAdmin\shell\004flyout\command]
+@="powershell.exe -WindowStyle Hidden \"Start-Process -Verb RunAs cmd.exe -ArgumentList @('/c','start wt.exe','-p','\"\"\"PowerShell\"\"\"','-d','\"\"\"%V\\.\"\"\"')\""

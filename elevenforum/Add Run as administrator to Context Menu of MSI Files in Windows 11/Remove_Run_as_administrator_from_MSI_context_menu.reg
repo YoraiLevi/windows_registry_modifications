@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: November 13, 2022
+; Tutorial: https://www.elevenforum.com/t/add-run-as-administrator-to-context-menu-of-msi-files-in-windows-11.10445/
+
+
+[-HKEY_CLASSES_ROOT\Msi.Package\Shell\runas]

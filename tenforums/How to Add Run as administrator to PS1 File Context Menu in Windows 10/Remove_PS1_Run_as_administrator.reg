@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: September 20th 2016
+; Tutorial: http://www.tenforums.com/tutorials/64349-run-administrator-add-ps1-file-context-menu-windows-10-a.html
+
+
+[-HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\runas]
+
+

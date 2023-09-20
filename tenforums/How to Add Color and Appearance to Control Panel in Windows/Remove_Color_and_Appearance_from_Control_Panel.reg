@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: April 13, 2020
+; Tutorial: https://www.tenforums.com/tutorials/154267-how-add-color-appearance-control-panel-windows.html
+
+
+[-HKEY_CLASSES_ROOT\CLSID\{106ee807-9e5d-451b-a9c5-74908630cefb}]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{106ee807-9e5d-451b-a9c5-74908630cefb}]

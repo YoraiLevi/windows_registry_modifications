@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: December 21st 2017
+; Updated on: June 4th 2019
+; Tutorial: https://www.tenforums.com/tutorials/100907-turn-off-write-fingertip-handwriting-panel-windows-10-a.html
+
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\TabletTip\EmbeddedInkControl]
+"EnableInkingWithTouch"=dword:00000001
+
+
+

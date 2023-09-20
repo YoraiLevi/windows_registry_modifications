@@ -1,0 +1,222 @@
+Windows Registry Editor Version 5.00
+
+; Created by:Shawn Brink
+; Created on: August 18th 2016
+; Updated on June 5th 2019
+; Tutorial: https://www.tenforums.com/tutorials/60751-add-attributes-context-menu-windows-10-a.html
+
+
+; Files
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes]
+"MUIVerb"="Attributes"
+"Icon"="imageres.dll,-165"
+"Extended"=-
+"SubCommands"=""
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\001flyout]
+"MUIVerb"="Display attributes of this file"
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\001flyout\command]
+@="cmd /k attrib \"%1\""
+
+; Clear all file attributes
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\002flyout]
+"CommandFlags"=dword:00000020
+"MUIVerb"="Clear all attributes (A SHR I) for this file"
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\002flyout\command]
+@="attrib -r -a -s -h -i \"%1\""
+
+; Archive file attribute
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\003flyout]
+"CommandFlags"=dword:00000020
+"MUIVerb"="Set archive attribute to this file"
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\003flyout\command]
+@="attrib +a \"%1\""
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\004flyout]
+"MUIVerb"="Clear archive attribute from this file"
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\004flyout\command]
+@="attrib -a \"%1\""
+
+
+; Hidden file attribute
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\005flyout]
+"CommandFlags"=dword:00000020
+"MUIVerb"="Set hidden attribute to this file"
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\005flyout\command]
+@="attrib +h \"%1\""
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\006flyout]
+"MUIVerb"="Clear hidden attribute from this file"
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\006flyout\command]
+@="attrib -h \"%1\""
+
+
+; Not content indexed file attribute
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\007flyout]
+"CommandFlags"=dword:00000020
+"MUIVerb"="Set not index contents and properties attribute to this file"
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\007flyout\command]
+@="attrib +i \"%1\""
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\008flyout]
+"MUIVerb"="Clear not index contents and properties attribute from this file"
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\008flyout\command]
+@="attrib -i \"%1\""
+
+
+; Read-only file attribute
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\009flyout]
+"CommandFlags"=dword:00000020
+"MUIVerb"="Set read-only attribute to this file"
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\009flyout\command]
+@="attrib +r \"%1\""
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\010flyout]
+"MUIVerb"="Clear read-only attribute from this file"
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\010flyout\command]
+@="attrib -r \"%1\""
+
+
+; System file attribute
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\011flyout]
+"CommandFlags"=dword:00000020
+"MUIVerb"="Set System attribute to this file"
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\011flyout\command]
+@="attrib +s \"%1\""
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\012flyout]
+"MUIVerb"="Clear System attribute from this file"
+
+[HKEY_CLASSES_ROOT\*\shell\Attributes\shell\012flyout\command]
+@="attrib -s \"%1\""
+
+
+
+; Directories (folders)
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes]
+"MUIVerb"="Attributes"
+"Icon"="imageres.dll,-165"
+"Extended"=-
+"SubCommands"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\001flyout]
+"MUIVerb"="Display attributes of this folder only"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\001flyout\command]
+@="cmd /k attrib \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\002flyout]
+"MUIVerb"="Display attributes of this folder, subfolders and files"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\002flyout\command]
+@="cmd /k attrib \"%1\" & attrib \"%1\\*.*\" /s /d"
+
+; Clear all file attributes
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\003flyout]
+"CommandFlags"=dword:00000020
+"MUIVerb"="Clear all attributes (A SHR I) for this folder only"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\003flyout\command]
+@="cmd /c attrib -r -a -s -h -i \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\004flyout]
+"MUIVerb"="Clear all attributes (A SHR I) for this folder, subfolders and files"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\004flyout\command]
+@="cmd /c attrib -r -a -s -h -i \"%1\" & attrib -r -a -s -h -i \"%1\\*.*\" /s /d"
+
+; Archive file attribute
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\005flyout]
+"CommandFlags"=dword:00000020
+"MUIVerb"="Set archive attribute to this folder only"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\005flyout\command]
+@="cmd /c attrib +a \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\006flyout]
+"MUIVerb"="Set archive attribute to this folder, subfolders and files"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\006flyout\command]
+@="cmd /c attrib +a \"%1\" & attrib +a \"%1\\*.*\" /s /d"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\007flyout]
+"MUIVerb"="Clear archive attribute from this folder only"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\007flyout\command]
+@="cmd /c attrib -a \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\008flyout]
+"MUIVerb"="Clear archive attribute from this folder, subfolders and files"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\008flyout\command]
+@="cmd /c attrib -a \"%1\" & attrib -a \"%1\\*.*\" /s /d"
+
+
+; Hidden file attribute
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\009flyout]
+"CommandFlags"=dword:00000020
+"MUIVerb"="Set hidden attribute to this folder only"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\009flyout\command]
+@="cmd /c attrib +h \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\010flyout]
+"MUIVerb"="Set hidden attribute to this folder, subfolders and files"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\010flyout\command]
+@="cmd /c attrib +h \"%1\" & attrib +h \"%1\\*.*\" /s /d"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\011flyout]
+"MUIVerb"="Clear hidden attribute from this folder only"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\011flyout\command]
+@="cmd /c attrib -h \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\012flyout]
+"MUIVerb"="Clear hidden attribute from this folder, subfolders and files"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\012flyout\command]
+@="cmd /c attrib -h \"%1\" & attrib -h \"%1\\*.*\" /s /d"
+
+
+; Not content indexed file attribute
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\013flyout]
+"CommandFlags"=dword:00000020
+"MUIVerb"="Set not index contents and properties attribute to this folder, subfolders and files"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\013flyout\command]
+@="cmd /c attrib +i \"%1\" & attrib +i \"%1\\*.*\" /s /d"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\014flyout]
+"MUIVerb"="Clear not index contents and properties attribute from this folder, subfolders and files"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\014flyout\command]
+@="cmd /c attrib -i \"%1\" & attrib -i \"%1\\*.*\" /s /d"
+
+
+; Read-only file attribute
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\015flyout]
+"CommandFlags"=dword:00000020
+"MUIVerb"="Set read-only attribute to this folder and subfiles"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\015flyout\command]
+@="cmd /c attrib +r \"%1\" & attrib +r \"%1\\*.*\" /s"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\016flyout]
+"MUIVerb"="Clear read-only attribute from this folder and subfiles"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Attributes\shell\016flyout\command]
+@="cmd /c attrib -r \"%1\" & attrib -r \"%1\\*.*\" /s"

@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: July 10, 2022
+; Tutorial: https://www.elevenforum.com/t/add-or-remove-d-drive-in-navigation-pane-of-file-explorer-in-windows-11.7636/
+
+
+[-HKEY_CURRENT_USER\Software\Classes\CLSID\{0525388b-89d9-4112-bf4d-2aaccb716a7f}]
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{0525388b-89d9-4112-bf4d-2aaccb716a7f}"=-
+
+[-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{0525388b-89d9-4112-bf4d-2aaccb716a7f}]

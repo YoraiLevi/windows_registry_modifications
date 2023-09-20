@@ -1,0 +1,16 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: February 24, 2023
+; Tutorial: https://www.elevenforum.com/t/add-or-remove-advanced-security-context-menu-in-windows-11.12907/
+
+
+[-HKEY_CLASSES_ROOT\*\shell\Windows.RibbonPermissionsDialog]
+
+[-HKEY_CLASSES_ROOT\Directory\shell\Windows.RibbonPermissionsDialog]
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\Windows.RibbonPermissionsDialog]
+
+[-HKEY_CLASSES_ROOT\Drive\shell\Windows.RibbonPermissionsDialog]
+
+[-HKEY_CLASSES_ROOT\IE.AssocFile.URL\shell\Windows.RibbonPermissionsDialog]

@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: January 13, 2023
+; Tutorial: https://www.elevenforum.com/t/enable-or-disable-show-battery-estimated-time-remaining-in-windows-11.11885/
+
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+"EnergyEstimationDisabled"=-
+"UserBatteryDischargeEstimator"=-
+"EnergyEstimationEnabled"=dword:00000001

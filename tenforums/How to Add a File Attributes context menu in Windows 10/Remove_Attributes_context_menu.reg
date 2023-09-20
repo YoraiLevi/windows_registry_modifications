@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+; Created by:Shawn Brink
+; Created on: August 18th 2016
+; Updated on June 5th 2019
+; Tutorial: https://www.tenforums.com/tutorials/60751-add-attributes-context-menu-windows-10-a.html
+
+
+[-HKEY_CLASSES_ROOT\*\shell\Attributes]
+
+[-HKEY_CLASSES_ROOT\Directory\shell\Attributes]

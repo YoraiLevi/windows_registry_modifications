@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: April 13, 2020
+; Tutorial: https://www.tenforums.com/tutorials/154265-how-add-desktop-background-control-panel-windows.html
+
+
+[HKEY_CLASSES_ROOT\CLSID\{406d2bc3-7256-435a-83ba-a24339dd63a4}]
+@="Desktop Background"
+"InfoTip"="Choose your desktop background"
+"System.ApplicationName"="Microsoft.Personalization"
+"System.ControlPanel.Category"=dword:00000001
+"System.Software.TasksFileUrl"="Internal"
+
+[HKEY_CLASSES_ROOT\CLSID\{406d2bc3-7256-435a-83ba-a24339dd63a4}\DefaultIcon]
+@="%SystemRoot%\\System32\\imageres.dll,-5346"
+
+[HKEY_CLASSES_ROOT\CLSID\{406d2bc3-7256-435a-83ba-a24339dd63a4}\Shell\Open\command]
+@="explorer shell:::{ED834ED6-4B5A-4bfe-8F11-A626DCB6A921} -Microsoft.Personalization\\pageWallpaper"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{406d2bc3-7256-435a-83ba-a24339dd63a4}]
+@="Desktop Background"

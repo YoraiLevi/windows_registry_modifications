@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: December 6, 2022
+; Tutorial: https://www.elevenforum.com/t/add-empty-recycle-bin-to-context-menu-in-windows-11.10981/
+
+ 
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\empty]

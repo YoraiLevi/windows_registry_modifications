@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: December 8, 2022
+; Tutorial: https://www.elevenforum.com/t/add-permanently-delete-to-context-menu-in-windows-11.11033/
+
+
+[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Windows.PermanentDelete]
+"CommandStateSync"=""
+"ExplorerCommandHandler"="{E9571AB2-AD92-4ec6-8924-4E5AD33790F5}"
+"Icon"="shell32.dll,-240"
+"Position"="Bottom"

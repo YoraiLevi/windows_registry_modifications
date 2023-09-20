@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; Created by:Shawn Brink
+; Created on: May 29th 2018
+; Tutorial: https://www.tenforums.com/tutorials/111263-add-per-directory-case-sensitivity-context-menu-windows-10-a.html
+
+
+; Folders
+[-HKEY_CLASSES_ROOT\Directory\shell\CaseSensitivity]
+
+
+; Drives
+[-HKEY_CLASSES_ROOT\Drive\shell\CaseSensitivity]

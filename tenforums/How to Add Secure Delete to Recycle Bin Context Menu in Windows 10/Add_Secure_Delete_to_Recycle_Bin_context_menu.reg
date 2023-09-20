@@ -1,0 +1,16 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: December 29th 2018
+; Updated on: August 30, 2021
+; Tutorial: https://www.tenforums.com/tutorials/124353-add-secure-delete-recycle-bin-context-menu-windows-10-a.html
+
+
+[HKEY_CLASSES_ROOT\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shell\SecureDelete]
+@="Secure Delete"
+"NoWorkingDirectory"=""
+"Position"="top"
+"Icon"="imageres.dll,-5305"
+
+[HKEY_CLASSES_ROOT\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shell\SecureDelete\command]
+@="cmd /v /c \"sdelete -p 3 -s \"!SystemDrive!\\$Recycle.Bin\\*\" && powershell -NoLogo -NoProfile -WindowStyle Hidden -Command \"& {Add-Type shell32 '[DllImport(\\\"shell32.dll\\\")] public static extern int SHUpdateRecycleBinIcon();' -Namespace System; [shell32]::SHUpdateRecycleBinIcon(); Start-Sleep 1}\"\""

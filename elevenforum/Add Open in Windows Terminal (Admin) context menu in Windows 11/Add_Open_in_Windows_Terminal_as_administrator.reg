@@ -1,0 +1,24 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: April 18, 2023
+; Tutorial: https://www.elevenforum.com/t/add-open-in-windows-terminal-as-administrator-context-menu-in-windows-11.581/
+
+
+[-HKEY_CLASSES_ROOT\Directory\shell\OpenWTHereAsAdmin]
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenWTHereAsAdmin]
+"HasLUAShield"=""
+"MUIVerb"="Open in Windows Terminal as administrator"
+"Extended"=-
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenWTHereAsAdmin\command]
+@="powershell.exe -WindowStyle Hidden \"Start-Process -Verb RunAs cmd.exe -ArgumentList @('/c','start wt.exe','-d','\"\"\"%V\\.\"\"\"')\""
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWTHereAsAdmin]
+"HasLUAShield"=""
+"MUIVerb"="Open in Windows Terminal as administrator"
+"Extended"=-
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWTHereAsAdmin\command]

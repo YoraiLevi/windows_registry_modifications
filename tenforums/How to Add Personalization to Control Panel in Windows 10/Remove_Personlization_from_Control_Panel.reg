@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: August 21st 2017
+; Tutorial: https://www.tenforums.com/tutorials/91883-add-personalization-control-panel-windows-10-a.html
+
+
+[-HKEY_CLASSES_ROOT\CLSID\{8a235e4c-9199-4fab-8bcb-806a0601d915}]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{8a235e4c-9199-4fab-8bcb-806a0601d915}]

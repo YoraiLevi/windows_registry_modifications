@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: July 16, 2021
+; Tutorial: https://www.elevenforum.com/t/add-open-in-windows-terminal-as-administrator-context-menu-in-windows-11.581/
+
+
+[-HKEY_CLASSES_ROOT\Directory\shell\OpenWTHereAsAdmin]
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWTHereAsAdmin]

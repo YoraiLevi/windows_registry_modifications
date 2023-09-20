@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: November 13, 2021
+; Tutorial: https://www.elevenforum.com/t/add-unblock-file-context-menu-in-windows-11.2763/
+
+
+[-HKEY_CLASSES_ROOT\*\shell\unblock]
+
+[-HKEY_CLASSES_ROOT\Directory\shell\unblock]

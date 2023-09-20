@@ -1,0 +1,37 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: June 27, 2022
+; Tutorial: https://www.elevenforum.com/t/add-or-remove-windows-c-drive-in-navigation-pane-of-file-explorer-in-windows-11.7342/
+
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{445a2e0d-9142-4458-a84a-66dee0196d3c}]
+@="C: Drive"
+"System.IsPinnedToNamespaceTree"=dword:00000001
+"SortOrderIndex"=dword:00000050
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{445a2e0d-9142-4458-a84a-66dee0196d3c}\DefaultIcon]
+@=hex(2):69,00,6d,00,61,00,67,00,65,00,72,00,65,00,73,00,2e,00,64,00,6c,00,6c,\
+  00,2c,00,2d,00,33,00,36,00,00,00
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{445a2e0d-9142-4458-a84a-66dee0196d3c}\InProcServer32]
+@=hex(2):43,00,3a,00,5c,00,57,00,49,00,4e,00,44,00,4f,00,57,00,53,00,5c,00,73,\
+  00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,73,00,68,00,65,00,6c,00,\
+  6c,00,33,00,32,00,2e,00,64,00,6c,00,6c,00,00,00
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{445a2e0d-9142-4458-a84a-66dee0196d3c}\Instance]
+"CLSID"="{0E5AAE11-A475-4c5b-AB00-C66DE400274E}"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{445a2e0d-9142-4458-a84a-66dee0196d3c}\Instance\InitPropertyBag]
+"Attributes"=dword:00000011
+"TargetFolderPath"=hex(2):43,00,3a,00,5c,00,00,00
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{445a2e0d-9142-4458-a84a-66dee0196d3c}\ShellFolder]
+"FolderValueFlags"=dword:00000028
+"Attributes"=dword:f080004d
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{445a2e0d-9142-4458-a84a-66dee0196d3c}"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{445a2e0d-9142-4458-a84a-66dee0196d3c}]
+@="C: Drive"

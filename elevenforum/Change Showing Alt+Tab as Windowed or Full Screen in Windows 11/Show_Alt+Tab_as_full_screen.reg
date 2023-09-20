@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: January 7, 2022
+; Tutorial: https://www.elevenforum.com/t/change-alt-tab-to-show-as-windowed-or-full-screen-in-windows-11.3833/
+
+
+[-HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FeatureManagement\Overrides\4\702590604]

@@ -1,0 +1,23 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: July 16, 2021
+; Updated on: October 13, 2021
+; Tutorial: https://www.elevenforum.com/t/add-open-in-windows-terminal-expandable-context-menu-in-windows-11.583/
+
+
+[HKEY_CLASSES_ROOT\Directory\Shell\OpenWTHere\shell\004flyout]
+"MUIVerb"="PowerShell 7"
+"Icon"="pwsh.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Shell\OpenWTHere\shell\004flyout\command]
+@="cmd.exe /c start wt.exe -p \"PowerShell\" -d \"%1\\.\""
+
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\Shell\OpenWTHere\shell\004flyout]
+"MUIVerb"="PowerShell 7"
+"Icon"="pwsh.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\Shell\OpenWTHere\shell\004flyout\command]
+@="cmd.exe /c start wt.exe -p \"PowerShell\" -d \"%V\\.\""

@@ -1,0 +1,130 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: June 18, 2023
+; Tutorial: https://www.elevenforum.com/t/restore-legacy-folder-options-in-windows-11.15744/
+
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\IconsLegacyOnly]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\ShowLegacyTypeOverlay]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\FolderLegacySizeTip]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\HideLegacyMergeConflicts]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\SuperLegacyHidden]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\ShowLegacyDriveLetters]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\ShowLegacyInfoTip]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\ShowLegacyCompColor]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\SharingLegacyWizardOn]
+
+
+; Always show icons, never thumbnails
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\IconsOnly]
+"CheckedValue"=dword:00000001
+"DefaultValue"=dword:00000000
+"HKeyRoot"=dword:80000001
+"RegPath"="Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced"
+"Text"="@shell32.dll,-30554"
+"Type"="checkbox"
+"UncheckedValue"=dword:00000000
+"ValueName"="IconsOnly"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\IconsOnly\Policy]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\IconsOnly\Policy\DisableThumbnails]
+
+
+;Display file icon on thumbnails
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\ShowTypeOverlay]
+"CheckedValue"=dword:00000001
+"DefaultValue"=dword:00000001
+"HKeyRoot"=dword:80000001
+"RegPath"="Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced"
+"Text"="@shell32.dll,-30558"
+"Type"="checkbox"
+"UncheckedValue"=dword:00000000
+"ValueName"="ShowTypeOverlay"
+
+
+; Display file size information on Folder tips
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\FolderSizeTip]
+"CheckedValue"=dword:00000001
+"DefaultValue"=dword:00000001
+"HKeyRoot"=dword:80000001
+"RegPath"="Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced"
+"Text"="@shell32.dll,-30514"
+"Type"="checkbox"
+"UncheckedValue"=dword:00000000
+"ValueName"="FolderContentsInfoTip"
+
+
+; Hide folder merge conflicts
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\HideMergeConflicts]
+"CheckedValue"=dword:00000001
+"DefaultValue"=dword:00000001
+"HKeyRoot"=dword:80000001
+"RegPath"="Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced"
+"Text"="@shell32.dll,-30563"
+"Type"="checkbox"
+"UncheckedValue"=dword:00000000
+"ValueName"="HideMergeConflicts"
+
+
+; Hide protected operating system files
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\SuperHidden]
+"CheckedValue"=dword:00000000
+"DefaultValue"=dword:00000000
+"HKeyRoot"=dword:80000001
+"RegPath"="Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced"
+"Text"="@shell32.dll,-30508"
+"Type"="checkbox"
+"UncheckedValue"=dword:00000001
+"ValueName"="ShowSuperHidden"
+"WarningIfNotDefault"="@shell32.dll,-28964"
+
+
+; Show drive letters
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\ShowDriveLetters]
+"CheckedValue"=dword:00000000
+"DefaultValue"=dword:00000000
+"HKeyRoot"=dword:80000001
+"Mask"=dword:00000002
+"RegPath"="Software\\Microsoft\\Windows\\CurrentVersion\\Explorer"
+"Text"="@shell32.dll,-30556"
+"Type"="checkbox"
+"UncheckedValue"=dword:00000002
+"ValueName"="ShowDriveLettersFirst"
+
+
+; Show pop-up description for folder and desktop items
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\ShowInfoTip]
+"CheckedValue"=dword:00000001
+"DefaultValue"=dword:00000001
+"HKeyRoot"=dword:80000001
+"RegPath"="Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced"
+"Text"="@shell32.dll,-30502"
+"Type"="checkbox"
+"UncheckedValue"=dword:00000000
+"ValueName"="ShowInfoTip"
+
+
+; Show encrypted or compressed NTFS files in color
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\ShowCompColor]
+"CheckedValue"=dword:00000001
+"DefaultValue"=dword:00000000
+"HKeyRoot"=dword:80000001
+"RegPath"="Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced"
+"Text"="@shell32.dll,-30512"
+"Type"="checkbox"
+"UncheckedValue"=dword:00000000
+"ValueName"="ShowEncryptCompressedColor"
+
+
+; Use Sharing Wizard
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\SharingWizardOn]
+"CheckedValue"=dword:00000001
+"DefaultValue"=dword:00000001
+"HKeyRoot"=dword:80000001
+"RegPath"="Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced"
+"Text"="@shell32.dll,-30551"
+"Type"="checkbox"
+"UncheckedValue"=dword:00000000
+"ValueName"="SharingWizardOn"

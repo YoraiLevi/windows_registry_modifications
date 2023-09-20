@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: February 22, 2022
+; Tutorial: https://www.elevenforum.com/t/add-or-remove-desktop-icons-in-windows-11.4827/
+
+ 
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}"=dword:00000000
+ 
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu]
+"{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}"=dword:00000000

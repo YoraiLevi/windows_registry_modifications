@@ -1,0 +1,16 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; http://www.tenforums.com
+; Tutorial: http://www.tenforums.com/tutorials/22953-advanced-security-add-context-menu-windows-8-10-a.html
+
+
+[-HKEY_CLASSES_ROOT\*\shell\Windows.RibbonPermissionsDialog]
+
+[-HKEY_CLASSES_ROOT\Directory\shell\Windows.RibbonPermissionsDialog]
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\Windows.RibbonPermissionsDialog]
+
+[-HKEY_CLASSES_ROOT\Drive\shell\Windows.RibbonPermissionsDialog]
+
+[-HKEY_CLASSES_ROOT\IE.AssocFile.URL\shell\Windows.RibbonPermissionsDialog]
