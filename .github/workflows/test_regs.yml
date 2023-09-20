@@ -15,23 +15,18 @@ jobs:
               run: |
                 New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" `
                 -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
-            - name: Setup PowerShell Core
-              uses: microsoft/setup-powershell@v1
-              with:
-                pwsh-version: '7.1'
             - name: Checkout repository
-            
               uses: actions/checkout@v2
             - name: Create reg-merge-results directory
               run: New-Item -ItemType Directory -Path reg-merge-results
             - name: Test reg merge
-              shell: pwsh
+              shell: powershell
               run: |
-                $ErrorActionPreference = "SilentlyContinue"
+                $ErrorActionPreference = "Continue"
                 $regFiles = Get-ChildItem -Path . -Filter *.reg -Recurse
                 foreach ($regFile in $regFiles) {
-                  $output = cmd /c "reg import $regFile.FullName 2>&1"
-                  if ($output -like "*The operation completed successfully.*") {
+                  $output = reg import $regFile.FullName 2>&1
+                  if ($output -like "*The operation completed successfully*") {
                     New-Item -ItemType File -Path "reg-merge-results\$($regFile.Name).pass"
                   } else {
                     New-Item -ItemType File -Path "reg-merge-results\$($regFile.Name).fail"
