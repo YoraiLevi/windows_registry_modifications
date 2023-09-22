@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+
+; https://winaero.com/how-to-enable-full-context-menus-in-windows-11/
+#disable windows11 new context menu and enable w11 classic context menu
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FeatureManagement\Overrides\4\586118283]
