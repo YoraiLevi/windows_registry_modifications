@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+
+; https://winaero.com/disable-web-search-in-windows-10-taskbar/
+[HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer]
+"DisableSearchBoxSuggestions"=-
