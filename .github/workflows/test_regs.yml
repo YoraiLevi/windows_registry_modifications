@@ -16,7 +16,7 @@ jobs:
                 New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" `
                 -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
             - name: Checkout repository
-              uses: actions/checkout@v2
+              uses: actions/checkout@v5
             - name: Create reg-merge-results directory
               run: New-Item -ItemType Directory -Path reg-merge-results
             - name: Test reg merge
@@ -33,7 +33,7 @@ jobs:
                   }
                 }
             - name: Upload reg-merge-results artifact
-              uses: actions/upload-artifact
+              uses: actions/upload-artifact@v4
               with:
                 name: reg-merge-results
                 path: reg-merge-results
